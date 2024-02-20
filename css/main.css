@@ -70,6 +70,10 @@ header a {
     font-weight: bold;
 }
 
+header a:hover{
+    text-decoration: underline;
+}
+
 section.container {
     margin-bottom: 32px;
 }
@@ -87,7 +91,7 @@ section img {
 }
 
 .produto h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
     margin: 16px 0;
 }
 
@@ -114,5 +118,54 @@ section img {
 
 .produto img {
     width: 100%;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px){
+
+    header li {
+        display: inline;
+        margin-bottom: 0;
+        margin-left: 16px;
+    }
+
+    .produtos-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 49%);
+        column-gap: 2%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .container{
+        max-width: 1024px;
+        width: 100%;
+    }
+
+    header li {
+        display: inline;
+        margin-bottom: 0;
+        margin-left: 16px;
+    }
+
+    .produtos-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 24.25%);
+        column-gap: 1%;
+    }
+
+    #sobre{
+        display: flex;
+    }
+
+    #sobre img {
+        width: 35%;
+        margin-right: 5%;
+    }
+
+    #sobre h2 {
+        padding-top: 0;
+    }
+
 }
 
